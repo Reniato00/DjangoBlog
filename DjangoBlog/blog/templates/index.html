@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock  %} 
+
+
+
+{% block content %} 
+    <div class="diseñadora">
+        <h2>Bienvenido/a al Portafolio de Diseñadora Gráfica</h2>
+        <p>¡Hola! Soy [Nombre de la Diseñadora], una apasionada del diseño gráfico y la creatividad. Me encanta trabajar con colores, formas y conceptos para crear diseños atractivos y efectivos.</p>
+        <p>En este portafolio, podrás ver una muestra de mi trabajo y proyectos pasados. Si te gusta mi estilo y estás interesado/a en colaborar, no dudes en contactarme.</p>
+    </div>
+
+    <div id="content-body">  
+        {% include 'dashboardservices.html' %}
+
+        </br>
+
+        {% include 'dashboardcontact.html' %}
+        </br>
+    </div>
+{% endblock %} 
+
+

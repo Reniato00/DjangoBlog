@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}Services{% endblock  %} 
+
+
+{% block content %}
+<div id="content-body">
+    <h1 class="content-service" >Services</h1>
+    <ul>
+        {% for service in services %}
+            <li>
+                <p>{{service.title}}</p>
+                <p>{{service.content}}</p>
+                <a href="">{{service.attachment_pdf}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

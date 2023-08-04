@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+{% load static %}
+<html> <!-- Etiqueta raíz que indica el inicio del documento HTML -->
+<head> <!-- Cabecera del documento -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres del documento (UTF-8 es ampliamente utilizado) -->
+    <title>{% block title %}{% endblock %}</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body> 
+    <header> 
+        <div class="logo">
+            <img src="{% static 'images/logo2.png' %}" alt="Logo">
+        </div>
+        <nav> <!-- Navegación -->
+            <ul> <!-- Lista no ordenada -->
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+        {% block content %}
+        {% endblock %}
+    
+    
+    
+
+    <footer> 
+        <p>Derechos de autor &copy; 2023 [Name of Person]</p>
+        <p>Fecha actual: {% now "d/m/Y" %}</p>
+    </footer>
+</body>
+
+</html> 

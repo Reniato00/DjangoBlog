@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block title %}Contact{% endblock  %} 
+
+
+{% block content %}
+<div id="content-body">
+    <h1>Contact Form</h1>
+</br>
+    <form method="post" action="{% url 'save-form' %}">
+        {% csrf_token %}
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</br>
+</div>
+{% endblock %}
+</div>
